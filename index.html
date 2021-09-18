@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Стильная столешница</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css?_v=20210917220011">
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container _container">
+
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__board board">
+				<div class="board__container _container">
+					<div class="board__title">
+						Эргономика —
+						ключ к успеху современного человека
+					</div>
+					<div class="board__text">
+						Cтильная столешница , выполненной из экологически безопасного материала (ДСП), и усиленной стальной
+						рамы не составит труда разместить на поверхности инновационного стола большое количество
+						крупногабаритной техники: стол выдерживает нагрузку до 80 кг.
+
+					</div>
+					<div class="board__block block-board">
+						<!-- <div class="block-board__wrapper"> -->
+						<div class="block-board__images">
+							<div class="block-board__image block-board__image_top ibg">
+								<picture>
+									<source srcset="img/board_2.webp" type="image/webp"><img
+										src="img/board_2.png?_v=1631905212627" alt="">
+								</picture>
+							</div>
+							<div class="block-board__image block-board__image_bottom ibg">
+								<picture>
+									<source srcset="img/board_1.webp" type="image/webp"><img
+										src="img/board_1.png?_v=1631905212627" alt="">
+								</picture>
+							</div>
+						</div>
+						<!-- </div> -->
+						<div class="block-board__wrapper-btn">
+							<div class="block-board__buttons">
+								<button class="block-board__button block-board__button_up">ВВЕРХ</button>
+								<button class="block-board__button block-board__button_down">ВНИЗ</button>
+							</div>
+						</div>
+					</div>
+					<div class="board__text board__text_also">
+						Также столешница, обладающая меламиновым покрытием, хорошо
+						переносит механические воздействия (царапины или удары), при контакте с водой не разрушается,
+						устойчиво переносит бытовые химические вещества и не выгорает под воздействием ультрафиолета.
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container _container">
+
+			</div>
+		</footer>
+
+
+
+		<script src="js/vendors.min.js?_v=20210917220012"></script>
+		<script src="js/app.min.js?_v=20210917220012"></script>
+		<script>
+
+
+			let high = 0;
+			const up = document.querySelector('.block-board__button_up');
+			const down = document.querySelector('.block-board__button_down');
+
+			up.onclick = function (e) {
+				if (high == -20) {
+					high = high - 5;
+					document.querySelector('.block-board__image_top').style.top = high + 'px';
+					document.querySelector('.block-board__button_up').style.background = "#a6ffff83";
+					document.querySelector('.block-board__button_up').style.color = "#7e7e7e";
+
+				}
+				else if (high <= -25) {
+					document.querySelector('.block-board__button_up').style.background = "#a6ffff83";
+					document.querySelector('.block-board__button_up').style.color = "#7e7e7e";
+				}
+				else {
+					high = high - 5;
+					document.querySelector('.block-board__image_top').style.top = high + 'px';
+					document.querySelector('.block-board__button_down').style.background = "";
+					document.querySelector('.block-board__button_down').style.color = "";
+
+				}
+
+			}
+			down.onclick = function (e) {
+				if (high == 20) {
+					high = high + 5;
+					document.querySelector('.block-board__image_top').style.top = high + 'px';
+					document.querySelector('.block-board__button_down').style.background = "#a6ffff83";
+					document.querySelector('.block-board__button_down').style.color = "#7e7e7e";
+				}
+
+				else if (high >= 25) {
+					document.querySelector('.block-board__button_down').style.background = "#a6ffff83";
+					document.querySelector('.block-board__button_down').style.color = "#7e7e7e";
+				}
+				else {
+					high = high + 5;
+					document.querySelector('.block-board__image_top').style.top = high + 'px';
+					document.querySelector('.block-board__button_up').style.background = "";
+					document.querySelector('.block-board__button_up').style.color = "";
+				}
+
+			}
+
+
+
+		</script>
+</body>
+
+</html>
