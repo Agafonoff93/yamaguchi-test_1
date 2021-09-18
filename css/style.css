@@ -1090,13 +1090,13 @@ body.ie ._ibg img {
   -o-transition: background 0.3s ease 0s;
   transition: background 0.3s ease 0s;
 }
-
+ @media (any-hover: hover){
 .block-board__button:hover {
   border-radius: 50%;
   background: #6c9999;
   color: #fff;
+ }
 }
-
 .block-board__button:active {
   background: #374e4e;
   border-radius: 50%;
